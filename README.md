@@ -8,7 +8,7 @@ Examples is an attempt to implement https://www.tensorflow.org/extend/adding_an_
 The command to create a dynamic library for CPU-Op is as bellow:
   1. TF_CFLAGS=( $(python -c 'import tensorflow as tf; print(" ".join(tf.sysconfig.get_compile_flags()))') )  
   2. TF_LFLAGS=( $(python -c 'import tensorflow as tf; print(" ".join(tf.sysconfig.get_link_flags()))') )  
-  3. g++ -std=c++11 -shared `zero_out.c`c -o `zero_out.so` -fPIC ${TF_CFLAGS[@]} ${TF_LFLAGS[@]} -O2  
+  3. g++ -std=c++11 -shared `zero_out.cc` -o `zero_out.so` -fPIC ${TF_CFLAGS[@]} ${TF_LFLAGS[@]} -O2  
 The command for GPU-Op:
   1. TF_CFLAGS=( $(python -c 'import tensorflow as tf; print(" ".join(tf.sysconfig.get_compile_flags()))') )  
   2. TF_LFLAGS=( $(python -c 'import tensorflow as tf; print(" ".join(tf.sysconfig.get_link_flags()))') )  
