@@ -14,5 +14,5 @@ This is the DLL of self_conv2d_op.cc. First, you must bazel the source-code of t
 This is used for self-conv2d test.
 
 # Result
-![image](https://github.com/XPping/BulidSelfTensorflowOp/raw/master/images/python_self_conv2d.jpg) 
+![image](https://github.com/XPping/BulidSelfTensorflowOp/raw/master/self_conv2d_op/images/python_self_conv2d.jpg) 
 ![image](https://github.com/XPping/BulidSelfTensorflowOp/raw/master/self_conv2d_op/images/self_conv2d.jpg) 
