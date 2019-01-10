@@ -19,4 +19,4 @@ The commands for GPU-Op:
     4. g++ -std=c++11 -shared -o cuda_op_kernel.so cuda_op_kernel.cc cuda_op_kernel.cu.o -L /usr/local/cuda-8.0/lib64/ -I $TF_INC -I$TF_INC/external/nsync/public -fPIC -lcudart -L$TF_LIB -ltensorflow_framework  
     
 # self_conv2d_op
-Here is a self-conv2d-op by img2col(caffe implements), which runs in DEVICE_CPU.
+Here is a self-conv2d-op by img2col(caffe implements) using tensorflow-C++ on the Tensor, which runs in DEVICE_CPU.
