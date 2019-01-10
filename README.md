@@ -17,3 +17,6 @@ The commands for GPU-Op:
     2. TF_LFLAGS=( $(python -c 'import tensorflow as tf; print(" ".join(tf.sysconfig.get_link_flags()))') )  
     3. nvcc -std=c++11 -c -o cuda_op_kernel.cu.o cuda_op_kernel.cu.cc -I $TF_INC -I$TF_INC/external/nsync/public -D GOOGLE_CUDA=1 -x cu -Xcompiler -fPIC  
     4. g++ -std=c++11 -shared -o cuda_op_kernel.so cuda_op_kernel.cc cuda_op_kernel.cu.o -L /usr/local/cuda-8.0/lib64/ -I $TF_INC -I$TF_INC/external/nsync/public -fPIC -lcudart -L$TF_LIB -ltensorflow_framework  
+    
+# self_conv2d_op
+Here is a self-conv2d-op by img2col(caffe implements), which runs in DEVICE_CPU.
